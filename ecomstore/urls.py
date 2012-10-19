@@ -5,8 +5,11 @@ from django.contrib import admin
 admin.autodiscover()
 
 urlpatterns = patterns('',
-    (r'^catalog/$','preview.views.home'),
-   
+    (r'^$','preview.views.home'),
+    (r'contact.html','preview.views.contact'),
+    (r'about.html'  ,'preview.views.about'),
+    (r'services.html','preview.views.services'),
+    (r'index.html'    ,'preview.views.home'),
     # Examples:
     # url(r'^$', 'ecomstore.views.home', name='home'),
     # url(r'^ecomstore/', include('ecomstore.foo.urls')),

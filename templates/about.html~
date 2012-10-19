@@ -11,10 +11,6 @@
 		<script type="text/javascript" src="/static/scripts/lightview.js"></script>
 	{% endblock %}
 	
-	{% block body_header%}
-	<body class="about">
-	{% endblock%}
-
 	{% block site_wrapper %}
 	<div class="wrapper">
 		

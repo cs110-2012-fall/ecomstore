@@ -183,23 +183,23 @@ footer a:hover {
 }
 
 .social-icon.twitter i {
-	background-image: url("/static/images/twitter.png")
+	background-image: url("../images/twitter.png")
 }
 
 .social-icon.facebook i {
-	background-image: url("/static/images/facebook.png")
+	background-image: url("../images/facebook.png")
 }
 
 .social-icon.linkedin i {
-	background-image: url("/static/images/linkedin.png")
+	background-image: url("../images/linkedin.png")
 }
 
 .social-icon.pinterest i {
-	background-image: url("/static/images/pinterest.png")
+	background-image: url("../images/pinterest.png")
 }
 
 .social-icon.rss i {
-	background-image: url("/static/images/rss.png")
+	background-image: url("../images/rss.png")
 }
 
 .social-icon i:hover {

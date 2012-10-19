@@ -1,11 +1,5 @@
 {% extends "ecomm_template.html" %}
-	
-
-	{% block body_header%}
-	<body class="services">
-	{% endblock%}
-
-{% block site_wrapper %}
+	{% block site_wrapper %}
 	<div class="wrapper">
 		
 		<div class="container-fluid text-background content-main">
