@@ -5,11 +5,12 @@ from django.contrib import admin
 admin.autodiscover()
 
 urlpatterns = patterns('',
-    (r'^$','preview.views.home'),
+    #(r'^$','preview.views.home'),
     (r'contact.html','preview.views.contact'),
     (r'about.html'  ,'preview.views.about'),
     (r'services.html','preview.views.services'),
     (r'index.html'    ,'preview.views.home'),
+    (r'shop_online.html','preview.views.shop_online'),
     # Examples:
     # url(r'^$', 'ecomstore.views.home', name='home'),
     # url(r'^ecomstore/', include('ecomstore.foo.urls')),
@@ -19,4 +20,6 @@ urlpatterns = patterns('',
 
     # Uncomment the next line to enable the admin:
      (r'^admin/', include(admin.site.urls)),
+     (r'^',include('ecomstore.catalog.urls')),
+     (r'^cart/' , include('ecomstore.cart.urls')),
 )

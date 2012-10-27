@@ -13,8 +13,8 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
         'NAME': 'ecomstore',                      # Or path to database file if using sqlite3.
-        'USER': 'admin',                      # Not used with sqlite3.
-        'PASSWORD': '123456',                  # Not used with sqlite3.
+        'USER': 'dotcom',                      # Not used with sqlite3.
+        'PASSWORD': '4742488',                  # Not used with sqlite3.
         'HOST': '',                      # Set to empty string for localhost. Not used with sqlite3.
         'PORT': '',                      # Set to empty string for default. Not used with sqlite3.
     }
@@ -70,7 +70,7 @@ STATICFILES_DIRS = (
     # Put strings here, like "/home/html/static" or "C:/www/django/static".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
-	"/home/thomas/Desktop/cs110/michael_jewelry_store/ecomstore/templates",
+	"/home/thomas/Desktop/cs110//ecomstore/templates",
 )
 
 # List of finder classes that know how to find static files in
@@ -111,7 +111,7 @@ TEMPLATE_DIRS = (
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
-  '/home/thomas/Desktop/cs110/michael_jewelry_store/ecomstore/templates',
+  '/home/thomas/Desktop/cs110/ecomstore/templates',
 )
 
 INSTALLED_APPS = (
@@ -161,6 +161,14 @@ LOGGING = {
 }
 
 SITE_NAME = "Michael Collins Jewelry Store"
-META_KEYWORD = "Custom Jewelry, Jewelry Repair, Rolex Watch, San Diego"
+META_KEYWORDS = "Custom Jewelry, Jewelry Repair, Rolex Watch, San Diego"
 META_DESCRIPTION = "Michael Collins Jewelry Store is a well known local jewery store providing custom jewelry and Rolex watch services and jewelry repair"
+
+TEMPLATE_CONTEXT_PROCESSORS = (
+    'django.contrib.auth.context_processors.auth',
+    'django.core.context_processors.debug',
+    'django.core.context_processors.i18n',
+    'django.core.context_processors.media',
+    'ecomstore.utils.context_processors.ecomstore',
+)
 
