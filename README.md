@@ -22,5 +22,6 @@ type **python manage.py validate**
 * If no errors comes up then type **python manage.py sqlall catalog**
 * If no errors comes up then type **python manage.py syncdb**
 * If no errors comes up then start the development server by **python manage.py runserver** (linux or mac user may need sudo)
-
 ###Fire up browser and type localhost:8000/catalog and localhost:8000/admin to see whether running properly
+
+**Shopping cart module finished**
