@@ -10,7 +10,7 @@ urlpatterns = patterns('',
     (r'about.html'  ,'preview.views.about'),
     (r'services.html','preview.views.services'),
     (r'index.html'    ,'preview.views.home'),
-    (r'shop_online.html','preview.views.shop_online'),
+    (r'shop_online.html',include('ecomstore.catalog.urls')),
     # Examples:
     # url(r'^$', 'ecomstore.views.home', name='home'),
     # url(r'^ecomstore/', include('ecomstore.foo.urls')),
@@ -20,6 +20,5 @@ urlpatterns = patterns('',
 
     # Uncomment the next line to enable the admin:
      (r'^admin/', include(admin.site.urls)),
-     (r'^',include('ecomstore.catalog.urls')),
      (r'^cart/' , include('ecomstore.cart.urls')),
 )

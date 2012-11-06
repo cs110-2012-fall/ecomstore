@@ -98,6 +98,7 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
+    'django.middleware.csrf.CsrfResponseMiddleware',
     # Uncomment the next line for simple clickjacking protection:
     # 'django.middleware.clickjacking.XFrameOptionsMiddleware',
 )
@@ -161,7 +162,7 @@ LOGGING = {
 }
 
 SITE_NAME = "Michael Collins Jewelry Store"
-META_KEYWORD = "Custom Jewelry, Jewelry Repair, Rolex Watch, San Diego"
+META_KEYWORDS = "Custom Jewelry, Jewelry Repair, Rolex Watch, San Diego"
 META_DESCRIPTION = "Michael Collins Jewelry Store is a well known local jewery store providing custom jewelry and Rolex watch services and jewelry repair"
 
 TEMPLATE_CONTEXT_PROCESSORS = (

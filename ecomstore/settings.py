@@ -1,6 +1,7 @@
 # Django settings for ecomstore project.
 
 DEBUG = True
+ENABLE_SSL = False
 TEMPLATE_DEBUG = DEBUG
 
 ADMINS = (
@@ -13,8 +14,8 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
         'NAME': 'ecomstore',                      # Or path to database file if using sqlite3.
-        'USER': 'dotcom',                      # Not used with sqlite3.
-        'PASSWORD': '4742488',                  # Not used with sqlite3.
+        'USER': 'admin',                      # Not used with sqlite3.
+        'PASSWORD': '123456',                  # Not used with sqlite3.
         'HOST': '',                      # Set to empty string for localhost. Not used with sqlite3.
         'PORT': '',                      # Set to empty string for default. Not used with sqlite3.
     }
@@ -70,7 +71,7 @@ STATICFILES_DIRS = (
     # Put strings here, like "/home/html/static" or "C:/www/django/static".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
-	"/home/thomas/Desktop/cs110//ecomstore/templates",
+	"/home/thomas/workspace/ecomstore/ecomstore/templates",
 )
 
 # List of finder classes that know how to find static files in
@@ -111,7 +112,7 @@ TEMPLATE_DIRS = (
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
-  '/home/thomas/Desktop/cs110/ecomstore/templates',
+  '/home/thomas/workspace/ecomstore/ecomstore/templates',
 )
 
 INSTALLED_APPS = (
@@ -127,6 +128,8 @@ INSTALLED_APPS = (
      'django.contrib.admin',
      'ecomstore.utils',
      'ecomstore.cart',
+    # 'ecomstore.SSLMiddleware.SSLRedirect',
+     
     # Uncomment the next line to enable admin documentation:
     # 'django.contrib.admindocs',
 )
@@ -171,4 +174,7 @@ TEMPLATE_CONTEXT_PROCESSORS = (
     'django.core.context_processors.media',
     'ecomstore.utils.context_processors.ecomstore',
 )
-
+GOOGLE_CHECKOUT_MERCHANT_ID = "708343757821939"
+GOOGLE_CHECKOUT_MERCHANT_KEY = "jrPWjh7p7kb5aPdZ29k-Lw"
+GOOGLE_CHECKOUT_URL = "https://sandbox.google.com/checkout/api/v2/merchantCheckout/Merchant/"+ GOOGLE_CHECKOUT_MERCHANT_ID
+CACHE_TIMEOUT = 60 * 60
