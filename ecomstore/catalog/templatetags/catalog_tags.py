@@ -6,6 +6,7 @@ from ecomstore.cart import cart
 from django.core.cache import cache
 from ecomstore.settings import CACHE_TIMEOUT
 
+
 register = template.Library()
 
 @register.inclusion_tag("tags/cart_box.html")

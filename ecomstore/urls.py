@@ -21,4 +21,6 @@ urlpatterns = patterns('',
     # Uncomment the next line to enable the admin:
      (r'^admin/', include(admin.site.urls)),
      (r'^cart/' , include('ecomstore.cart.urls')),
+     (r'^accounts/',include('ecomstore.accounts.urls')),
+     (r'^accounts/',include('django.contrib.auth.urls')),
 )

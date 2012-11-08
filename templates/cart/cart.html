@@ -21,13 +21,21 @@
 					Cart Subtotal:
 				</th>
 				<th class="right">
-					
+					{{ cart_subtotal|currency }}
 				</th>
 			</tr>
 			{% if cart_items %}
 			<tr>
 				<th class="right" colspan="6">
-					Check 
+					<form method="POST" action=".">
+						{% csrf_token %}
+    					<input type="hidden" name="submit" value="Checkout" />
+    					<input type="image" name="Google Checkout" alt="Fast checkout through Google"
+        src="http://sandbox.google.com/checkout/buttons/checkout.gif?merchant_id={{ merchant_id }}
+              &w=180&h=46&style=white&variant=text&loc=en_US"  height="46" width="180" />
+              
+              		
+    				</form>
 				</th>
 			</tr>
 			{% endif %}
@@ -44,7 +52,6 @@
 					<td>{{ item.price|currency }}</td>
 					<td class="right">
 						<form method="post" action="." class="cart">
-						{% csrf_token %}
 							<label for="quantity">Quantity:</label>
 							<input type="text" name="quantity" value="{{ item.quantity }}" id="quantity" size="2" class="quantity" maxlength="5" />
 							<input type="hidden" name="item_id" value="{{ item.id }}" />
@@ -55,7 +62,6 @@
 					</td>
 					<td>
 						<form method="post" action="." class="cart">
-						{% csrf_token %}
 							<input type="hidden" name="item_id" value="{{ item.id }}" />
 							<input type="submit" name="submit" value="Remove"/>
 						</form>
@@ -72,5 +78,6 @@
 		{% endif %}
 		</tbody>
 	</table>
+	<br /><br />
 	
 {% endblock %}

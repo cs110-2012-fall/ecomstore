@@ -99,12 +99,14 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
+    'django.contrib.flatpages.middleware.FlatpageFallbackMiddleware',
     # Uncomment the next line for simple clickjacking protection:
     # 'django.middleware.clickjacking.XFrameOptionsMiddleware',
 )
 
 ROOT_URLCONF = 'ecomstore.urls'
 
+LOGIN_REDIRECT_URL = '/accounts/my_account/'
 # Python dotted path to the WSGI application used by Django's runserver.
 WSGI_APPLICATION = 'ecomstore.wsgi.application'
 
@@ -123,11 +125,14 @@ INSTALLED_APPS = (
     'ecomstore.catalog',
     #'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.flatpages',
     #'djangodblog',
     # Uncomment the next line to enable the admin:
      'django.contrib.admin',
      'ecomstore.utils',
      'ecomstore.cart',
+     'ecomstore.accounts',
+     'ecomstore.checkout',
     # 'ecomstore.SSLMiddleware.SSLRedirect',
      
     # Uncomment the next line to enable admin documentation:
