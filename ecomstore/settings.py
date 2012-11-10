@@ -100,6 +100,7 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.contrib.flatpages.middleware.FlatpageFallbackMiddleware',
+    'ecomstore.SSLMiddleware.SSLRedirect',
     # Uncomment the next line for simple clickjacking protection:
     # 'django.middleware.clickjacking.XFrameOptionsMiddleware',
 )
@@ -133,7 +134,6 @@ INSTALLED_APPS = (
      'ecomstore.cart',
      'ecomstore.accounts',
      'ecomstore.checkout',
-    # 'ecomstore.SSLMiddleware.SSLRedirect',
      
     # Uncomment the next line to enable admin documentation:
     # 'django.contrib.admindocs',
@@ -183,3 +183,8 @@ GOOGLE_CHECKOUT_MERCHANT_ID = "708343757821939"
 GOOGLE_CHECKOUT_MERCHANT_KEY = "jrPWjh7p7kb5aPdZ29k-Lw"
 GOOGLE_CHECKOUT_URL = "https://sandbox.google.com/checkout/api/v2/merchantCheckout/Merchant/"+ GOOGLE_CHECKOUT_MERCHANT_ID
 CACHE_TIMEOUT = 60 * 60
+
+AUTHNET_POST_URL = 'test.authorize.net'
+AUTHNET_POST_PATH = '/gateway/transact.dll'
+AUTHNET_LOGIN = '8gXZ497Qxd'
+AUTHNET_KEY = '238TVfjA4E6Eh3tg'
